@@ -1,8 +1,6 @@
 package zairastra.u5w2p.payloads;
 
 import jakarta.validation.constraints.NotNull;
-import zairastra.u5w2p.entities.BusinessTrip;
-import zairastra.u5w2p.entities.Employee;
 
 import java.time.LocalDate;
 
@@ -11,7 +9,7 @@ public record NewReservationDTO(
         LocalDate requestDate,
         String optionalPreference,
         @NotNull(message = "Employee ID is required")
-        Employee employee,
+        Long employeeId,
         @NotNull(message = "BusinessTrip ID is required")
-        BusinessTrip businessTrip) {
+        Long businessTripId) {
 }
