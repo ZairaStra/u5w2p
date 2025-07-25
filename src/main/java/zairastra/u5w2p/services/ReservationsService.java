@@ -57,7 +57,7 @@ public class ReservationsService {
         return reservationsRepository.findById(reservationId).orElseThrow(() -> new NotFoundException(reservationId));
     }
 
-    //FINDBYIDANDUPDATE
+    //FINDBYIDANDUPDATE - non funziona se non cambio la data???
     public Reservation findReservationByIdAndUpdate(Long reservationId, NewReservationDTO payload) {
         Reservation found = findReservationById(reservationId);
 
